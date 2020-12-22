@@ -31,6 +31,8 @@ a{
 p{
     font-size: 1.8rem;
     font-weight: 300;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 img{
@@ -260,6 +262,7 @@ li {
 }
 .about-details p{
     margin-top: 10rem;
+    font-size: 2.2rem;
 
 }
 .social-media {
@@ -356,12 +359,35 @@ li {
 }
 
 .portfolio-img h1{
-    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
     text-transform: uppercase;
     font-weight: 300;
     margin: 1rem 0;
     justify-content: center;
     display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    transform: translate(0,-50%);
+}
+.portfolio-img h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 1px #c0e3dd;
+}
+.portfolio-img h1:nth-child(2){
+    color: #f9b9b7;
+    animation: animate 8s ease-in-out infinite;
+}
+@keyframes animate{
+    0%,100%{
+        /* clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%); */
+        clip-path: polygon(0 0, 21% 8%, 35% 18%, 48% 38%, 61% 49%, 83% 54%, 92% 54%, 100% 52%, 100% 100%, 0 100%);
+    }
+    50%{
+        /* clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%); */
+        clip-path: polygon(0 55%, 14% 62%, 30% 62%, 44% 54%, 54% 46%, 66% 22%, 79% 8%, 100% 1%, 100% 100%, 0 100%);
+    }
+    
 }
 
 .portfolio-description{
@@ -449,13 +475,12 @@ li {
 }
 .timeline .date::after{
     content: '';
-    box-shadow: 0 0 0 4px #fd57bf;
     border-radius: 100%;
     left: -7.9rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
-    animation: pulse 3s infinite;
+    background-color: white;
+    animation: pulse2 3s infinite;
 
 }
 /* End TimeLine */
@@ -525,6 +550,7 @@ input[type="Submit"]:hover{
 
 .copyright p{
     font-size: 1.4rem;
+    text-align: center;
 }
 /* End footer */
 
@@ -532,6 +558,18 @@ input[type="Submit"]:hover{
 @keyframes pulse{
     0%{
         box-shadow: 0 0 0 0 rgba(253,87,191, 0.99)
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(253,87,191, 0)
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(253,87,191, 0)
+    }
+}
+
+@keyframes pulse2{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255,255,255, 0.99)
     }
     70%{
         box-shadow: 0 0 0 2rem rgba(253,87,191, 0)
