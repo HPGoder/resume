@@ -208,7 +208,7 @@ li {
     font-size : 20rem;
     font-weight: 500;
     opacity: 1;
-    font-family: 'Frijole', sans-serif;
+    font-family: 'Frijole', cursive;
     background : linear-gradient(to right, #f9b9b7, #c0e3dd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
