@@ -18,7 +18,9 @@ body {
     height : 100%;
     background: url(../images/sitebg11.jpg) no-repeat center fixed;
     background-size: cover;
+   
 }
+  
 section{
     padding: 6rem 0;
 }
@@ -34,7 +36,6 @@ p{
     text-align: justify;
     text-justify: inter-word;
 }
-
 img{
     width: 100%;
 }
@@ -106,10 +107,8 @@ header{
     width : 100%;
     height : 100vh;
     position : fixed;
-    /* hiding it */
     top: -100vh;
     z-index:50; 
-    /* background-color : #006471; */
     background: url(../images/sitebg11.jpg) no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -250,6 +249,7 @@ li {
 .about-heading {
     text-align : center;
     text-transform: uppercase;
+    align-items:  center;
     line-height: 0;
     margin-bottom: 6rem;
 }
@@ -595,57 +595,236 @@ input[type="Submit"]:hover{
 /* Media queries */
 @media screen and (max-width:768px){
     
+    /* Start Global */
     body {
-        background :url(../images/img1.jpg) no-repeat center fixed ; 
+        background: url(../images/sitebg11.jpg) no-repeat center fixed;
+        background-size: cover;
+       
     }
-    .container {
-        flex-direction: column;
-    }
-    .landing-text h1{
+
+    .landing-text h1 {
         font-size: 10rem;
     }
-    .landing-text h6{
-        font-size: 1.7rem;
+    .landing-text h6 {
+        font-size: 1.5rem;
     }
     .nav-list{
         flex-direction: column;
     }
     li{
-        margin: 2rem 0;
-    }
-    .nav-link{
-        font-size: 2.5rem;
-    }
-    .about-heading h1{
-        font-size:8rem;
-    }
-    .section-heading h1{
-        font-size: 3rem;
-    }
+       margin: 2rem 0;
+   }
+   .nav-link{
+       font-size: 4.5rem;
+   }
+   /* End Global */
+   /* Start Reusable*/
+   .section-heading{
+       font-size: 3rem;
+   }
 
-    .about-details .nav-list{
-        flex-direction: initial;
+   .container{
+       flex-direction: column;
+   }
+   /* End Reusable*/
+   /* Start About */
+
+   .about-heading h1{
+       font-size: 8rem;
+   }
+
+   .about-details .nav-list{
+       flex-direction: initial;
+   }
+   .about-details li{
+       margin: 0 2rem;
+   }
+
+   /* End About */
+
+
+   /* Start Services */
+   .icon-container {
+       width: 7rem;
+       height: 7rem;
     }
-    .about-details li{
-        margin :0 2rem;
-    }
-    .icon-container{
-        width: 7rem;
-        height : 7rem;
-    }
-    .icon-container i{
+    .icon-container i {
         font-size: 4rem;
     }
-    .portfolio-img h1{
-        max-width: 20rem;
+    .my-skills{
+        margin-top: 10rem;
+        display : grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 2.5rem;
+        text-align: center;
     }
+   /* End Services */
+
+   /* Start Portfolio */
+   .portfolio-img h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 1rem 0;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    transform: translate(0,-50%);
+    }
+    .portfolio-img h1:nth-child(1){
+        color: transparent;
+        -webkit-text-stroke: 1px #c0e3dd;
+    }
+    .portfolio-img h1:nth-child(2){
+        display:none;
+        color: #f9b9b7;
+        animation: animate 8s ease-in-out infinite;
+    }
+    @keyframes animate{
+        0%,100%{
+            /* clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%); */
+            clip-path: polygon(0 0, 21% 8%, 35% 18%, 48% 38%, 61% 49%, 83% 54%, 92% 54%, 100% 52%, 100% 100%, 0 100%);
+        }
+        50%{
+            /* clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%); */
+            clip-path: polygon(0 55%, 14% 62%, 30% 62%, 44% 54%, 54% 46%, 66% 22%, 79% 8%, 100% 1%, 100% 100%, 0 100%);
+        }
+        
+    }
+   /* End Portfolio */
+
+   /* Start Timeline */
     .timeline ul{
-        margin : 0 0 0 auto;
+        margin: 0 0 0 auto;
+
     }
-    .timeline .date:before{
+
+    .timeline .date::before{
         left: -20rem;
     }
-    .timeline .date:after{
+    .timeline .date::after{
         left: -5.9rem;
     }
+    
+   /* End Timeline */
+}
+
+@media screen and (max-width:600px){
+    
+    /* Start Global */
+    body {
+        background: url(../images/sitebg11.jpg) no-repeat center fixed;
+        background-size: cover;
+       
+    }
+
+    .landing-text h1 {
+        font-size: 10rem;
+    }
+    .landing-text h6 {
+        font-size: 1.5rem;
+    }
+    .nav-list{
+        flex-direction: column;
+    }
+    li{
+       margin: 2rem 0;
+   }
+   .nav-link{
+       font-size: 4.5rem;
+   }
+   /* End Global */
+   /* Start Reusable*/
+   .section-heading{
+       font-size: 3rem;
+   }
+
+   .container{
+       flex-direction: column;
+   }
+   /* End Reusable*/
+   /* Start About */
+
+   .about-heading h1{
+       font-size: 8rem;
+   }
+
+   .about-details .nav-list{
+       flex-direction: initial;
+   }
+   .about-details li{
+       margin: 0 2rem;
+   }
+
+   /* End About */
+
+
+   /* Start Services */
+   .icon-container {
+       width: 7rem;
+       height: 7rem;
+    }
+    .icon-container i {
+        font-size: 4rem;
+    }
+    .my-skills{
+        margin-top: 10rem;
+        display : grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 2.5rem;
+        text-align: center;
+    }
+   /* End Services */
+
+   /* Start Portfolio */
+   .portfolio-img h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 1rem 0;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    transform: translate(0,-50%);
+    }
+    .portfolio-img h1:nth-child(1){
+        color: transparent;
+        -webkit-text-stroke: 1px #c0e3dd;
+    }
+    .portfolio-img h1:nth-child(2){
+        display:none;
+        color: #f9b9b7;
+        animation: animate 8s ease-in-out infinite;
+    }
+    @keyframes animate{
+        0%,100%{
+            /* clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%); */
+            clip-path: polygon(0 0, 21% 8%, 35% 18%, 48% 38%, 61% 49%, 83% 54%, 92% 54%, 100% 52%, 100% 100%, 0 100%);
+        }
+        50%{
+            /* clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%); */
+            clip-path: polygon(0 55%, 14% 62%, 30% 62%, 44% 54%, 54% 46%, 66% 22%, 79% 8%, 100% 1%, 100% 100%, 0 100%);
+        }
+        
+    }
+   /* End Portfolio */
+
+   /* Start Timeline */
+    .timeline ul{
+        margin: 0 0 0 auto;
+
+    }
+
+    .timeline .date::before{
+        left: -20rem;
+    }
+    .timeline .date::after{
+        left: -5.9rem;
+    }
+    
+   /* End Timeline */
 }
