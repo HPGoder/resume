@@ -673,16 +673,16 @@ input[type="Submit"]:hover{
        margin: auto;
    }
    .portfolio-img h1{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 5rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
-    transform: translate(0,-50%);
+        font-family: 'Bebas Neue', cursive;
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: auto;
+        justify-content: center;
+        display: flex;
+        box-sizing: border-box;
+        position: relative;
+        transform: translate(0,-50%);
     }
     .portfolio-img h1:nth-child(1){
         color: transparent;
@@ -691,9 +691,6 @@ input[type="Submit"]:hover{
     .portfolio-img h1:nth-child(2){
         display:none;
     }
-
-
-
    /* End Portfolio */
 
    /* Start Timeline */
@@ -732,7 +729,7 @@ input[type="Submit"]:hover{
    }
 
    .has-margin-right{
-    margin-right:0;
+         margin-right:auto;
     }
    /* End Global */
 
@@ -786,19 +783,13 @@ input[type="Submit"]:hover{
        flex-direction: column;
    }
    .portfolio-img h1{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 5rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
+        font-size: 5rem;
+        font-weight: 300;
+        margin: auto;
     }
 
     .portfolio-img{
-        width: 50rem;
+        width: 90%;
         order:1;
     }
     .portfolio-description{
@@ -808,10 +799,10 @@ input[type="Submit"]:hover{
         display:none;
     }
     .portfolio-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5rem;
     }
     .portfolio-item:last-child{
         margin-bottom: 0;
@@ -840,6 +831,8 @@ input[type="Submit"]:hover{
     .portfolio-description p:nth-child(2){
         margin: 0 0 10rem 0;
     }
+
+
    /* End Portfolio */
 
    /* Start Timeline */
@@ -855,4 +848,54 @@ input[type="Submit"]:hover{
     }
     
    /* End Timeline */
+}
+
+@media screen and (max-width:400px){
+    .nav-list i{
+        font-size: 3rem;
+    }
+    .has-margin-right{
+        margin-right: auto;
+    }
+    .portfolio-item {
+        margin: auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+    }
+    .portfolio-img h1{
+        font-size: 5rem;
+        font-weight: 300;
+        margin: 0 0 0 0;
+        position: absolute;
+    }
+
+    .portfolio-img{
+        width: 90%;
+        flex: 1;
+    }
+    .portfolio-img h1{
+        margin: 0;
+        font-size: 4rem;
+    }
+    .portfolio-description h1{
+        margin: 4rem 0 0 0;
+        font-size: 2rem;
+    }
+
+    .timeline ul{
+        margin: auto;
+        padding-right:0;
+        padding-left: 1rem;
+
+    }
+    .timeline .date::before{
+        left: -10rem;
+        transform: rotate(-90deg);
+    }
+    .timeline .date::after{
+        left: -1.9rem;
+    }
 }
