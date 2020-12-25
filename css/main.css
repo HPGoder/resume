@@ -851,6 +851,10 @@ input[type="Submit"]:hover{
 }
 
 @media screen and (max-width:400px){
+    .menu-toggler{
+        top : 2rem;
+        right: 10rem;
+    }
     .nav-list i{
         font-size: 3rem;
     }
