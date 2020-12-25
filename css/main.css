@@ -590,9 +590,9 @@ input[type="Submit"]:hover{
 }
 
 
-/* End Animation */
+    /* End Animation */
 
-/* Media queries */
+    /* Media queries */
 @media screen and (max-width:768px){
     
     /* Start Global */
@@ -618,6 +618,7 @@ input[type="Submit"]:hover{
        font-size: 4.5rem;
    }
    /* End Global */
+
    /* Start Reusable*/
    .section-heading{
        font-size: 3rem;
@@ -625,7 +626,11 @@ input[type="Submit"]:hover{
 
    .container{
        flex-direction: column;
+       margin: auto;
    }
+   .has-margin-right{
+        margin-right:0;
+    }
    /* End Reusable*/
    /* Start About */
 
@@ -638,6 +643,9 @@ input[type="Submit"]:hover{
    }
    .about-details li{
        margin: 0 2rem;
+   }
+   .profile-img{
+       margin: auto;
    }
 
    /* End About */
@@ -661,12 +669,15 @@ input[type="Submit"]:hover{
    /* End Services */
 
    /* Start Portfolio */
+   .portfolio-img{
+       margin: auto;
+   }
    .portfolio-img h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 300;
-    margin: 1rem 0;
+    margin: auto;
     justify-content: center;
     display: flex;
     box-sizing: border-box;
@@ -679,20 +690,10 @@ input[type="Submit"]:hover{
     }
     .portfolio-img h1:nth-child(2){
         display:none;
-        color: #f9b9b7;
-        animation: animate 8s ease-in-out infinite;
     }
-    @keyframes animate{
-        0%,100%{
-            /* clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%); */
-            clip-path: polygon(0 0, 21% 8%, 35% 18%, 48% 38%, 61% 49%, 83% 54%, 92% 54%, 100% 52%, 100% 100%, 0 100%);
-        }
-        50%{
-            /* clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%); */
-            clip-path: polygon(0 55%, 14% 62%, 30% 62%, 44% 54%, 54% 46%, 66% 22%, 79% 8%, 100% 1%, 100% 100%, 0 100%);
-        }
-        
-    }
+
+
+
    /* End Portfolio */
 
    /* Start Timeline */
@@ -714,14 +715,8 @@ input[type="Submit"]:hover{
 @media screen and (max-width:600px){
     
     /* Start Global */
-    body {
-        background: url(../images/sitebg11.jpg) no-repeat center fixed;
-        background-size: cover;
-       
-    }
-
     .landing-text h1 {
-        font-size: 10rem;
+        font-size: 8rem;
     }
     .landing-text h6 {
         font-size: 1.5rem;
@@ -735,20 +730,28 @@ input[type="Submit"]:hover{
    .nav-link{
        font-size: 4.5rem;
    }
+
+   .has-margin-right{
+    margin-right:0;
+    }
    /* End Global */
+
    /* Start Reusable*/
    .section-heading{
-       font-size: 3rem;
+       font-size: 2.5rem;
    }
 
    .container{
        flex-direction: column;
    }
+    .has-margin-right{
+        margin-right:auto;
+    }
    /* End Reusable*/
    /* Start About */
 
    .about-heading h1{
-       font-size: 8rem;
+       font-size: 6rem;
    }
 
    .about-details .nav-list{
@@ -779,37 +782,63 @@ input[type="Submit"]:hover{
    /* End Services */
 
    /* Start Portfolio */
+   .portfolio-item{
+       flex-direction: column;
+   }
    .portfolio-img h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 300;
-    margin: 1rem 0;
+    margin: auto;
     justify-content: center;
     display: flex;
     box-sizing: border-box;
     position: relative;
-    transform: translate(0,-50%);
     }
+
+    .portfolio-img{
+        width: 50rem;
+        order:1;
+    }
+    .portfolio-description{
+       order: 2;
+    }
+    .portfolio-img h1:nth-child(2){
+        display:none;
+    }
+    .portfolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    }
+    .portfolio-item:last-child{
+        margin-bottom: 0;
+    }
+
     .portfolio-img h1:nth-child(1){
         color: transparent;
         -webkit-text-stroke: 1px #c0e3dd;
     }
-    .portfolio-img h1:nth-child(2){
-        display:none;
-        color: #f9b9b7;
-        animation: animate 8s ease-in-out infinite;
+
+    .portfolio-description h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: auto;
     }
-    @keyframes animate{
-        0%,100%{
-            /* clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%); */
-            clip-path: polygon(0 0, 21% 8%, 35% 18%, 48% 38%, 61% 49%, 83% 54%, 92% 54%, 100% 52%, 100% 100%, 0 100%);
-        }
-        50%{
-            /* clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%); */
-            clip-path: polygon(0 55%, 14% 62%, 30% 62%, 44% 54%, 54% 46%, 66% 22%, 79% 8%, 100% 1%, 100% 100%, 0 100%);
-        }
-        
+
+    .portfolio-description h6{
+        margin: auto;
+    }
+
+    .portfolio-description .cta{
+        display: flex;
+    }
+
+    .portfolio-description p:nth-child(2){
+        margin: 0 0 10rem 0;
     }
    /* End Portfolio */
 
@@ -818,7 +847,6 @@ input[type="Submit"]:hover{
         margin: 0 0 0 auto;
 
     }
-
     .timeline .date::before{
         left: -20rem;
     }
